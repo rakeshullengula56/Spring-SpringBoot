@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("upi")
+@Qualifier("upiPay")
 public class UpiPayment implements PaymentService {
     @Override
     public void pay() {
