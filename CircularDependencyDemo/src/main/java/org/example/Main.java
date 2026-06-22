@@ -9,5 +9,7 @@ public class Main {
         ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
         OrderService orderService=context.getBean(OrderService.class);
         orderService.placeOrder();
+
+        /*Circular dependency is resolved using @Autowired but springBoot 2.5++ doesn't allow it*/
     }
 }
