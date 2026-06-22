@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PaymentService {
-    @Autowired
-    private OrderService orderService;
+//    @Autowired
+//    private OrderService orderService;
 
 //    public PaymentService(OrderService orderService) {
 //        this.orderService = orderService;
@@ -14,6 +14,8 @@ public class PaymentService {
 
     public void pay() {
         System.out.println("payment done");
-        orderService.getOrderDetails();
+        //its only job is to handle payment
+        //orderService.getOrderDetails();
+        //violating Single Responsibility principle
     }
 }
