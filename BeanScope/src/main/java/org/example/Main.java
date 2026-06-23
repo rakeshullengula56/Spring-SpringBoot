@@ -8,13 +8,22 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     static void main() {
         ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
+//
+//        OrderService os= context.getBean(OrderService.class);
+//        OrderService os2= context.getBean(OrderService.class);
+//        System.out.println(os==os2);
+        OrderService orderService=new OrderService();
+        //we can also create a object but its not managed by spring
 
-        OrderService os= context.getBean(OrderService.class);
-        OrderService os2= context.getBean(OrderService.class);
-        System.out.println(os==os2);
+        //singleton pattern say one bean for one class def
+        //here singleton scope means one bean per bean def
 
         //here by default OrderService is Singleton scope so it creates only one bean
         //and reference is injected wherever needed
+        //default eager initialization
+
+        //after changing scope to prototype, two beans are created
+        //lazy initialization
 
 
     }
